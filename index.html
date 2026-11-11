@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Family Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div class="topbar">
+    <button class="icon-btn" id="backBtn" data-action="home" aria-label="Go home" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button class="pill voice" id="voiceBtn" data-action="voice" aria-label="Change the voice">Kid voice</button>
+    <button class="icon-btn mute" id="muteBtn" data-action="mute" aria-label="Sound on" aria-pressed="false"></button>
+  </div>
+
+  <section class="screen home" id="home">
+    <button class="hero" id="hero" data-action="hero" aria-label="Tap the family"></button>
+    <h1>Family Words</h1>
+    <p class="tag">Look. Listen. Learn.</p>
+    <div class="homebtns">
+      <button class="btn primary big" data-action="play">Play</button>
+      <button class="btn big" data-action="learn">Learn</button>
+    </div>
+  </section>
+
+  <section class="screen" id="learn" hidden>
+    <p class="lead" id="learnLead" role="status">Tap a picture.</p>
+    <div class="lgrid" id="lgrid"></div>
+  </section>
+
+  <section class="screen" id="play" hidden>
+    <div class="progress" id="progress" role="img"></div>
+    <div class="qcard" id="qcard"></div>
+    <div class="actions"><button class="btn primary big" id="nextBtn" data-action="next" hidden>Next</button></div>
+  </section>
+
+  <section class="screen done" id="done" hidden>
+    <h1>Great job!</h1>
+    <div class="fstars" id="fstars" aria-hidden="true"></div>
+    <p class="tag" id="doneTag"></p>
+    <div class="fgrid" id="fgrid"></div>
+    <div class="donebtns">
+      <button class="btn primary big" data-action="play">Play again</button>
+      <button class="btn" data-action="learn">Learn</button>
+    </div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
